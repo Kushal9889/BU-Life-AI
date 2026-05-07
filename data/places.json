@@ -1,0 +1,227 @@
+[
+  {
+    "name": "Mugar Memorial Library",
+    "category": "library",
+    "building": "Mugar",
+    "campus_zone": "CAS",
+    "description": "Main research library. Quiet floors on 3–5. Has printing, group study rooms on floor 2, and a 24-hour reading room during finals.",
+    "hours": "Mon-Thu 8am-midnight, Fri 8am-10pm, Sat 10am-8pm, Sun 10am-midnight",
+    "features": ["quiet", "outlets", "wifi", "printing", "group_rooms", "24hr_finals"]
+  },
+  {
+    "name": "Science & Engineering Library (SCI)",
+    "category": "library",
+    "building": "SCI",
+    "campus_zone": "ENG",
+    "description": "Library focused on STEM resources. Quieter than Mugar, good for focused work. Printing available.",
+    "hours": "Mon-Thu 9am-10pm, Fri 9am-6pm, Sat-Sun 12pm-6pm",
+    "features": ["quiet", "outlets", "wifi", "printing", "study_tables"]
+  },
+  {
+    "name": "GSU Study Lounge (2nd Floor)",
+    "category": "study",
+    "building": "GSU",
+    "campus_zone": "GSU",
+    "description": "Open study area above the GSU food court. Great for quick work sessions between classes. Tends to get noisy during lunch.",
+    "hours": "Mon-Fri 7am-10pm, Sat-Sun 9am-8pm",
+    "features": ["outlets", "wifi", "group_tables", "food_nearby"]
+  },
+  {
+    "name": "CDS 3rd Floor Study Lounge",
+    "category": "study",
+    "building": "CDS",
+    "campus_zone": "CDS",
+    "description": "Modern study lounge with collaborative and quiet sections. Whiteboards available. Very popular with CS and data science students.",
+    "hours": "Mon-Fri 8am-10pm, Sat 10am-6pm",
+    "features": ["outlets", "wifi", "quiet", "group_tables", "whiteboards"]
+  },
+  {
+    "name": "Questrom School of Business — Atrium",
+    "category": "study",
+    "building": "Questrom",
+    "campus_zone": "Questrom",
+    "description": "Open atrium with seating on multiple levels. Good natural light, collaborative atmosphere. Bloomberg terminals on lower level.",
+    "hours": "Mon-Fri 7:30am-10pm, Sat 9am-6pm",
+    "features": ["outlets", "wifi", "group_tables", "bloomberg_terminals"]
+  },
+  {
+    "name": "Photonics Center Study Lounge",
+    "category": "study",
+    "building": "PHO",
+    "campus_zone": "ENG",
+    "description": "Quiet lounge in the engineering quad. Less crowded than Mugar. Good spot if you're near ENG or CDS.",
+    "hours": "Mon-Fri 8am-9pm",
+    "features": ["quiet", "outlets", "wifi"]
+  },
+  {
+    "name": "GSU Starbucks",
+    "category": "dining",
+    "building": "GSU",
+    "campus_zone": "GSU",
+    "description": "Fast coffee and snacks. Usually busy 8–10am and noon. Seating available inside.",
+    "hours": "Mon-Fri 7am-9pm, Sat-Sun 9am-7pm",
+    "features": ["coffee", "food", "wifi", "outlets", "seating"]
+  },
+  {
+    "name": "Panda Express (GSU)",
+    "category": "dining",
+    "building": "GSU",
+    "campus_zone": "GSU",
+    "description": "Fast Chinese-American food. Accepts BU Dining Points. Quick option between classes.",
+    "hours": "Mon-Fri 10:30am-9pm, Sat-Sun 11am-8pm",
+    "features": ["food", "dining_points", "fast"]
+  },
+  {
+    "name": "Rhett's (Fitness & Recreation Center)",
+    "category": "dining",
+    "building": "FitRec",
+    "campus_zone": "West Campus",
+    "description": "Casual café inside FitRec. Good smoothies and snacks. Quiet enough to eat and study.",
+    "hours": "Mon-Fri 8am-8pm, Sat-Sun 10am-6pm",
+    "features": ["coffee", "food", "seating", "quiet"]
+  },
+  {
+    "name": "The Diner (West Campus)",
+    "category": "dining",
+    "building": "West Campus Residential",
+    "campus_zone": "West Campus",
+    "description": "All-you-can-eat dining hall. Best value if you have a meal plan. Often less crowded than GSU during peak hours.",
+    "hours": "Mon-Fri 7am-9pm, Sat-Sun 8am-8pm",
+    "features": ["food", "meal_plan", "seating", "quiet"]
+  },
+  {
+    "name": "Granby St. (CDS Area Dining)",
+    "category": "dining",
+    "building": "CDS",
+    "campus_zone": "CDS",
+    "description": "Dining spot near the CDS/Questrom cluster. Grab-and-go sandwiches, hot food, and coffee. Good for quick bites.",
+    "hours": "Mon-Fri 7:30am-4pm",
+    "features": ["food", "coffee", "fast", "dining_points"]
+  },
+  {
+    "name": "Mugar Library Printer (Floor 1)",
+    "category": "printer",
+    "building": "Mugar",
+    "campus_zone": "CAS",
+    "description": "Black & white and color printing. Pay with BU ID. Computers available nearby for file access.",
+    "hours": "Mon-Thu 8am-midnight, Fri 8am-10pm, Sat-Sun 10am-8pm",
+    "features": ["printing", "color_printing", "computers"]
+  },
+  {
+    "name": "GSU Computing Lab (2nd Floor)",
+    "category": "printer",
+    "building": "GSU",
+    "campus_zone": "GSU",
+    "description": "Computing lab with ~30 computers and printers. BU ID swipe required. Good fallback if you forgot your laptop.",
+    "hours": "Mon-Fri 8am-10pm, Sat-Sun 10am-6pm",
+    "features": ["printing", "computers", "color_printing", "scanning"]
+  },
+  {
+    "name": "CDS Computing Lab",
+    "category": "printer",
+    "building": "CDS",
+    "campus_zone": "CDS",
+    "description": "Computing and printing in the CDS building. Usually less crowded than Mugar or GSU labs.",
+    "hours": "Mon-Fri 9am-9pm",
+    "features": ["printing", "computers", "scanning"]
+  },
+  {
+    "name": "ERC (Educational Resource Center) — Tutoring",
+    "category": "support",
+    "building": "GSU",
+    "campus_zone": "GSU",
+    "description": "Free drop-in and appointment tutoring for most undergrad subjects. Especially strong in STEM. Walk-in hours vary by subject.",
+    "hours": "Mon-Fri 10am-6pm (varies by subject)",
+    "features": ["tutoring", "free", "drop_in", "appointment"]
+  },
+  {
+    "name": "BU Career Development — Drop-In Hours",
+    "category": "support",
+    "building": "GSU",
+    "campus_zone": "GSU",
+    "description": "15-minute drop-in career advising for resume review, cover letters, and quick job search questions. No appointment needed during drop-in.",
+    "hours": "Mon-Fri 10am-4pm (drop-in), full appointments by booking",
+    "features": ["career", "resume", "drop_in", "free"]
+  },
+  {
+    "name": "Dean of Students Office",
+    "category": "support",
+    "building": "GSU",
+    "campus_zone": "GSU",
+    "description": "Student support for academic difficulty, personal issues, medical leaves, and emergency resources.",
+    "hours": "Mon-Fri 9am-5pm",
+    "features": ["advising", "emergency_resources", "appointments"]
+  },
+  {
+    "name": "International Students & Scholars Office (ISSO)",
+    "category": "support",
+    "building": "888 Commonwealth Ave",
+    "campus_zone": "CAS",
+    "description": "Visa advising, OPT/CPT applications, travel signatures, and support for all international students. Book appointments online.",
+    "hours": "Mon-Fri 9am-5pm",
+    "features": ["visa", "opt", "cpt", "international", "appointments"]
+  },
+  {
+    "name": "FitRec (Fitness & Recreation Center)",
+    "category": "study",
+    "building": "FitRec",
+    "campus_zone": "West Campus",
+    "description": "Large gym and recreation center. Has quiet seating areas near the track on the upper level. Good mental health break between classes.",
+    "hours": "Mon-Fri 6am-11pm, Sat-Sun 7am-10pm",
+    "features": ["gym", "quiet", "outlets", "wifi", "track"]
+  },
+  {
+    "name": "Agganis Arena Study Lounge",
+    "category": "study",
+    "building": "Agganis Arena",
+    "campus_zone": "Agganis",
+    "description": "Quiet lounge near the arena entrance. Rarely crowded. Good for a solo work session near West Campus.",
+    "hours": "Mon-Fri 9am-8pm",
+    "features": ["quiet", "outlets", "wifi"]
+  },
+  {
+    "name": "Stone Science Building Atrium",
+    "category": "study",
+    "building": "STO",
+    "campus_zone": "CAS",
+    "description": "Open atrium in the CAS science building. High ceilings, natural light, good for reading. Near BioMedical Engineering dept.",
+    "hours": "Mon-Fri 8am-8pm",
+    "features": ["quiet", "outlets", "wifi", "natural_light"]
+  },
+  {
+    "name": "COM (College of Communication) Lounge",
+    "category": "study",
+    "building": "COM",
+    "campus_zone": "COM",
+    "description": "Media-focused lounge with editing suites nearby. Good for journalism or media production students.",
+    "hours": "Mon-Fri 8am-9pm",
+    "features": ["outlets", "wifi", "editing_suites", "quiet"]
+  },
+  {
+    "name": "Marsh Chapel Meditation Room",
+    "category": "support",
+    "building": "Marsh Chapel",
+    "campus_zone": "CAS",
+    "description": "Quiet meditation and reflection space. No reservation needed. Good for decompressing between stressful days.",
+    "hours": "Daily 9am-9pm",
+    "features": ["quiet", "meditation", "free", "no_reservation"]
+  },
+  {
+    "name": "Warren Towers Convenience Store",
+    "category": "dining",
+    "building": "Warren Towers",
+    "campus_zone": "CAS",
+    "description": "Late-night snack option near central campus. Open later than most dining options.",
+    "hours": "Mon-Sun 8am-midnight",
+    "features": ["food", "snacks", "late_night", "dining_points"]
+  },
+  {
+    "name": "Cummington Mall Study Benches",
+    "category": "study",
+    "building": "Outdoor",
+    "campus_zone": "CAS",
+    "description": "Outdoor seating along Cummington Mall. Weather permitting. Good for phone calls or outdoor reading.",
+    "hours": "Outdoor (weather dependent)",
+    "features": ["outdoor", "wifi", "quiet"]
+  }
+]

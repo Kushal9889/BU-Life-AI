@@ -1,0 +1,110 @@
+[
+  {
+    "title": "BU Career Fair — Spring 2026",
+    "description": "Annual spring career fair featuring 80+ employers across tech, finance, consulting, and healthcare. Bring printed resumes and dress professionally.",
+    "location": "GSU Ballroom",
+    "event_date": "2026-05-12",
+    "category": "career",
+    "tags": ["career", "internship", "full-time", "networking", "tech", "finance", "consulting"],
+    "source_url": "https://www.bu.edu/careers/events/"
+  },
+  {
+    "title": "AI & Machine Learning Research Symposium",
+    "description": "Faculty and PhD students present ongoing AI and ML research. Great for undergrads looking to get into research or understand the field.",
+    "location": "Photonics Center, Room 206",
+    "event_date": "2026-05-15",
+    "category": "academic",
+    "tags": ["AI", "machine learning", "research", "PhD", "data science"],
+    "source_url": "https://www.bu.edu/eng/events/"
+  },
+  {
+    "title": "BU Spark! Demo Day",
+    "description": "Student startups from BU Spark accelerator present their products to investors and the BU community. Free food and networking after.",
+    "location": "Hariri Building, 111 Cummington Mall",
+    "event_date": "2026-05-17",
+    "category": "startup",
+    "tags": ["startup", "entrepreneurship", "demo", "innovation", "networking"],
+    "source_url": "https://www.bu.edu/spark/"
+  },
+  {
+    "title": "International Student Cultural Night",
+    "description": "Annual celebration featuring performances, food, and displays from BU's international student communities. Open to all.",
+    "location": "GSU Metcalf Hall",
+    "event_date": "2026-05-20",
+    "category": "social",
+    "tags": ["international", "culture", "diversity", "food", "performance"],
+    "source_url": "https://www.bu.edu/isso/events/"
+  },
+  {
+    "title": "Hackathon: Build for BU",
+    "description": "24-hour hackathon focused on solving real campus problems. Form teams of 2–4. Prizes sponsored by BU Spark and local tech companies.",
+    "location": "CDS, 665 Commonwealth Ave",
+    "event_date": "2026-05-23",
+    "category": "tech",
+    "tags": ["hackathon", "coding", "AI", "tech", "startup", "prizes", "teamwork"],
+    "source_url": "https://www.bu.edu/cds/events/"
+  },
+  {
+    "title": "Resume Workshop — Tech & Engineering",
+    "description": "Small-group workshop with BU Career Development advisors focused on resumes for software engineering and tech roles.",
+    "location": "GSU, Room 203",
+    "event_date": "2026-05-10",
+    "category": "career",
+    "tags": ["resume", "career", "tech", "engineering", "internship", "workshop"],
+    "source_url": "https://www.bu.edu/careers/events/"
+  },
+  {
+    "title": "CPT/OPT Info Session for F-1 Students",
+    "description": "ISSO advisors walk through Curricular Practical Training and Optional Practical Training requirements, timelines, and application steps.",
+    "location": "Online (Zoom)",
+    "event_date": "2026-05-14",
+    "category": "academic",
+    "tags": ["CPT", "OPT", "international", "visa", "F-1", "work authorization"],
+    "source_url": "https://www.bu.edu/isso/events/"
+  },
+  {
+    "title": "Grad School Panel: Applying to PhD Programs",
+    "description": "Current PhD students and faculty discuss the application process, statements of purpose, and what grad school is really like.",
+    "location": "CAS, Room 313",
+    "event_date": "2026-05-16",
+    "category": "academic",
+    "tags": ["grad school", "PhD", "research", "applications", "academic career"],
+    "source_url": "https://www.bu.edu/cas/events/"
+  },
+  {
+    "title": "Mental Health & Wellness Fair",
+    "description": "Explore campus wellness resources, talk to counselors, and pick up stress-relief tools. Free therapy dog sessions from 1–3pm.",
+    "location": "Marsh Plaza",
+    "event_date": "2026-05-21",
+    "category": "wellness",
+    "tags": ["mental health", "wellness", "stress", "counseling", "self-care"],
+    "source_url": "https://www.bu.edu/wellness/events/"
+  },
+  {
+    "title": "Entrepreneurship Speaker Series: Founders in Residence",
+    "description": "BU alum founder shares the journey of building a venture-backed startup. Q&A session after the talk.",
+    "location": "Questrom, Rafik B. Hariri Building Room 101",
+    "event_date": "2026-05-19",
+    "category": "startup",
+    "tags": ["entrepreneurship", "startup", "founder", "venture", "business", "networking"],
+    "source_url": "https://www.bu.edu/questrom/events/"
+  },
+  {
+    "title": "Data Science Club — Weekly Meetup",
+    "description": "Weekly informal meetup for students interested in data science and machine learning. Project showcases, paper discussions, and beginner workshops.",
+    "location": "CDS 3rd Floor Lounge",
+    "event_date": "2026-05-13",
+    "category": "academic",
+    "tags": ["data science", "machine learning", "AI", "club", "projects", "Python"],
+    "source_url": "https://www.bu.edu/cds/"
+  },
+  {
+    "title": "BU Night Market",
+    "description": "Student-run pop-up market on Nickerson Field. Food trucks, student vendors, live music. Great break from studying.",
+    "location": "Nickerson Field",
+    "event_date": "2026-05-24",
+    "category": "social",
+    "tags": ["food", "market", "social", "outdoor", "fun", "community"],
+    "source_url": "https://www.bu.edu/studentservices/"
+  }
+]

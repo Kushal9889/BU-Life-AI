@@ -1,0 +1,42 @@
+# Web framework
+fastapi
+uvicorn
+slowapi
+python-dotenv
+python-multipart
+httpx
+
+# Database
+SQLAlchemy
+psycopg2-binary
+pgvector
+
+# Retrieval
+rank_bm25
+
+# LangChain + LangGraph
+langchain
+langchain-core
+langchain-community
+langchain-classic
+langchain-openai
+langchain-nvidia-ai-endpoints
+langchain-text-splitters
+langgraph
+langgraph-checkpoint
+langgraph-prebuilt
+langgraph-sdk
+langsmith
+
+# Data models
+pydantic
+pydantic-settings
+
+# Scraping
+beautifulsoup4
+
+# Evaluation (RAGAS)
+ragas
+datasets
+numpy
+pandas

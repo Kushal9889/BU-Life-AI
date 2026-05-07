@@ -1,0 +1,62 @@
+[
+  {
+    "title": "BU Advising Center",
+    "url": "https://www.bu.edu/academics/advising/",
+    "category": "advising",
+    "content": "The BU Advising Center provides academic planning and course selection guidance. Located in the College of Arts & Sciences building. Offers both group workshops and individual advising sessions. Schedule appointments via the portal or drop-in during office hours Mon-Fri 9am-5pm. Helps with major declarations, minor selections, and course prerequisites."
+  },
+  {
+    "title": "Career Development Office",
+    "url": "https://www.bu.edu/careers/",
+    "category": "career",
+    "content": "CDO offers resume review, interview prep, job search strategies, and employer networking events. Resume workshops every Tuesday. 1-on-1 career coaching available by appointment. Job board has 5000+ listings. Conducts recruiting events throughout the semester. Located in the Questrom building, Suite 300."
+  },
+  {
+    "title": "International Students & Scholars Office",
+    "url": "https://www.bu.edu/isis/",
+    "category": "international",
+    "content": "ISSO assists with visa issues, CPT/OPT work authorization, and cultural adjustment. Mandatory pre-arrival orientation in August. Monthly social events for international students. Helps with I-20 forms, travel signatures, and employment verification. Open Mon-Fri 9am-5pm. Walk-ins welcome."
+  },
+  {
+    "title": "Health Services",
+    "url": "https://www.bu.edu/healthservices/",
+    "category": "health",
+    "content": "BU Health Services provides medical care, counseling, and wellness resources. Free for all BU students. Urgent care available daily 8am-8pm. Mental health counseling has 6-session free allotment. Prescriptions available at on-site pharmacy. Dental and vision services also offered. Located in Warren Towers."
+  },
+  {
+    "title": "Financial Aid Office",
+    "url": "https://www.bu.edu/admissions/financing/",
+    "category": "financial",
+    "content": "Financial Aid handles FAFSA, scholarships, loans, and grants. Annual FAFSA deadline March 1st. Merit scholarships reviewed automatically. Need-based aid available through federal and institutional sources. Loans include federal and private options. Staff available for counseling on debt management and repayment plans."
+  },
+  {
+    "title": "Housing & Residence Life",
+    "url": "https://www.bu.edu/housing/",
+    "category": "housing",
+    "content": "Housing assignment process opens in February. First-year students must live on-campus. Housing options include dorms, townhouses, and pods. Housing costs range $8,000-$14,000 per year. Residence halls have quiet hours (10pm weekdays, midnight weekends). Housing provides community programming and study spaces."
+  },
+  {
+    "title": "Academic Integrity & Conduct",
+    "url": "https://www.bu.edu/integrity/",
+    "category": "policy",
+    "content": "BU has strict academic integrity policies. Violations include plagiarism, cheating, and unauthorized collaboration. First offense typically results in course failure. Serious cases reported to Student Conduct. All students required to complete integrity training. Citation guides and library resources help prevent unintentional violations."
+  },
+  {
+    "title": "Writing Center",
+    "url": "https://www.bu.edu/writing/",
+    "category": "academic-support",
+    "content": "Writing Center offers free 1-on-1 tutoring for essays, research papers, and professional writing. Available online and in-person. No appointment needed for drop-in sessions (first-come, first-served). Hours Mon-Fri 9am-8pm, Sat 10am-4pm. Helps with brainstorming, drafting, editing, and citation."
+  },
+  {
+    "title": "Disability Services",
+    "url": "https://www.bu.edu/disability/",
+    "category": "accommodation",
+    "content": "Provides academic accommodations for students with disabilities. Services include note-taking, testing accommodations, and assistive technology. Documentation required. Accommodations are confidential. Students register and meet with counselors to develop plans. 5 business days notice needed for exam accommodations."
+  },
+  {
+    "title": "Mugar Memorial Library",
+    "url": "https://www.bu.edu/library/",
+    "category": "library",
+    "content": "Main library with 3.5M+ volumes and extensive digital resources. 24-hour computer labs. Group study rooms available (reserve online). Research librarians provide free consultations. 3D printing and multimedia editing equipment available. Library card extends to Boston Public Library system."
+  }
+]
