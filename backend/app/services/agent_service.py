@@ -85,19 +85,20 @@ def _build_tools(db):
     @tool
     async def get_nearby_places(
         location: str,
-        place_type: str,
+        place_type: str = "any",
         features: list[str] = None,
         max_walk_minutes: int = 10,
     ) -> str:
         """Find campus places (study spots, dining, printers, libraries) near a location.
         place_type must be one of: study, dining, printer, library, support, any.
-        features is an optional list like ['quiet', 'outlets', 'coffee']."""
+        features is an optional list like ['quiet', 'outlets', 'coffee'].
+        max_walk_minutes is an integer (default 10)."""
         result = await search_places(
             db=db,
             location=location,
             place_type=place_type,
             features=features or [],
-            max_walk_minutes=max_walk_minutes,
+            max_walk_minutes=int(max_walk_minutes),
         )
         if not result.get("places"):
             return json.dumps({"message": "No results found. Try broader search parameters."})
@@ -120,7 +121,7 @@ def _build_tools(db):
     async def get_events(interests: list[str], days_ahead: int = 7) -> str:
         """Get personalized event recommendations based on student interests.
         interests is a list of topics like ['AI', 'career', 'startup', 'wellness']."""
-        result = await search_events(db=db, interests=interests, days_ahead=days_ahead)
+        result = await search_events(db=db, interests=interests, days_ahead=int(days_ahead))
         if not result.get("events"):
             return json.dumps({"message": "No events found. Try broader interests or longer timeframe."})
         return json.dumps(result)

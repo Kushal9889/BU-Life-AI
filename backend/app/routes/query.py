@@ -43,14 +43,18 @@ async def query(request: Request, req: QueryRequest, db=Depends(get_db)):
     except Exception as e:
         error_msg = str(e).lower()
         if "429" in error_msg or "rate" in error_msg:
-            logger.warning("NIM rate limit hit: %s", e)
+            logger.warning("Rate limit hit: %s", e)
             return {
-                "response": "I'm temporarily rate-limited by the AI provider. Please wait 30-60 seconds and try again.",
+                "response": "I'm temporarily rate-limited. Please wait 30-60 seconds and try again.",
                 "type": "error",
                 "sources": [],
             }
-        logger.exception("Query failed")
-        raise HTTPException(status_code=500, detail=str(e))
+        logger.exception("Query failed: %s", e)
+        return {
+            "response": "Something went wrong processing your query. Please try rephrasing or try again.",
+            "type": "error",
+            "sources": [],
+        }
 
 
 @router.post("/query/stream")
