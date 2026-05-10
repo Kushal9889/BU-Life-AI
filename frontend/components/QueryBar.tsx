@@ -35,14 +35,22 @@ export default function QueryBar({ onResult, onStreamToken, onStreamStart, onStr
   const [timeAvailable, setTimeAvailable] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [loadingStage, setLoadingStage] = useState<'initial' | 'warmup'>('initial');
 
   const handleSubmit = async () => {
     if (!query.trim()) return;
     setLoading(true);
     setError('');
+    setLoadingStage('initial');
     onStreamStart();
 
     const sessionId = getSessionId();
+    const startTime = Date.now();
+
+    // Upgrade to "warmup" message after 8s (cold start detection)
+    const warmupTimer = setTimeout(() => {
+      setLoadingStage('warmup');
+    }, 8000);
 
     try {
       await streamQuery(
@@ -54,8 +62,10 @@ export default function QueryBar({ onResult, onStreamToken, onStreamStart, onStr
         },
         onStreamToken,
       );
+      clearTimeout(warmupTimer);
       onStreamEnd();
-    } catch {
+    } catch (err) {
+      clearTimeout(warmupTimer);
       try {
         const result = await sendQuery({
           message: query,
@@ -65,8 +75,13 @@ export default function QueryBar({ onResult, onStreamToken, onStreamStart, onStr
         });
         onResult(result);
         onStreamEnd();
-      } catch {
-        setError('Something went wrong. Is the backend running?');
+      } catch (fallbackErr) {
+        const elapsed = Date.now() - startTime;
+        if (elapsed > 30000) {
+          setError('Backend is taking too long to initialize. Please try again in 60 seconds.');
+        } else {
+          setError('Something went wrong. Please try again.');
+        }
         onStreamEnd();
       }
     }
@@ -114,7 +129,11 @@ export default function QueryBar({ onResult, onStreamToken, onStreamStart, onStr
         onClick={handleSubmit}
         disabled={loading || !query.trim()}
       >
-        {loading ? 'Thinking…' : 'Ask BU Life AI'}
+        {loading
+          ? loadingStage === 'warmup'
+            ? 'First-time setup (initializing AI models)…'
+            : 'Loading campus data…'
+          : 'Ask BU Life AI'}
       </button>
 
       <p className="text-xs text-[#666] mt-2 text-center">Cmd+Enter to submit</p>
