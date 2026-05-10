@@ -6,23 +6,24 @@ from langchain_nvidia_ai_endpoints import NVIDIAEmbeddings
 
 load_dotenv()
 
-CHAT_MODEL = os.getenv("CHAT_MODEL", "meta/llama-3.3-70b-instruct")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "nvidia/nv-embedqa-e5-v5")
-NVIDIA_KEY = os.getenv("NVIDIA_API_KEY", "")
+GROQ_KEY = os.getenv("GROQ_API_KEY", "")
 
 
 def get_llm():
+    """Groq-powered LLM — fast, free, reliable. No more NIM rate limit issues."""
     return ChatOpenAI(
-        model=CHAT_MODEL,
+        model="llama-3.3-70b-versatile",
         temperature=0,
-        base_url="https://integrate.api.nvidia.com/v1",
-        api_key=NVIDIA_KEY,
-        max_retries=3,
-        request_timeout=30,
+        base_url="https://api.groq.com/openai/v1",
+        api_key=GROQ_KEY,
+        max_retries=2,
+        request_timeout=15,
     )
 
 
 def get_embeddings():
+    """NVIDIA NV-EmbedQA — used only for vector retrieval (embeddings already built)."""
     return NVIDIAEmbeddings(
         model=EMBEDDING_MODEL,
     )

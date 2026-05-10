@@ -7,13 +7,11 @@ services:
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     plan: free
     envVars:
-      - key: NVIDIA_API_KEY
+      - key: GROQ_API_KEY
         sync: false
-      - key: CHAT_MODEL
-        value: meta/llama-3.3-70b-instruct
       - key: EMBEDDING_MODEL
         value: nvidia/nv-embedqa-e5-v5
-      - key: GROQ_API_KEY
+      - key: NVIDIA_API_KEY
         sync: false
       - key: DATABASE_URL
         sync: false

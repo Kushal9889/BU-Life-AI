@@ -1,5 +1,6 @@
 import json
 import logging
+import uuid
 
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel
@@ -64,7 +65,7 @@ async def query_stream(request: Request, req: QueryRequest, db=Depends(get_db)):
         try:
             async for chunk, metadata in agent.astream(
                 {"messages": messages},
-                config={"configurable": {"thread_id": req.session_id}},
+                config={"configurable": {"thread_id": f"{req.session_id}_{uuid.uuid4().hex[:8]}"}},
                 stream_mode="messages",
             ):
                 if (
