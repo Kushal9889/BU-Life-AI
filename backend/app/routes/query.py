@@ -2,15 +2,14 @@ import json
 import logging
 import uuid
 
-from fastapi import APIRouter, Depends, HTTPException, Request
+from fastapi import APIRouter, Depends, Request
 from pydantic import BaseModel
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 from starlette.responses import StreamingResponse
-
 from langchain_core.messages import AIMessageChunk
-from app.services.agent_service import handle_query, _build_agent_for_route, _build_messages
-from app.services.query_router import route_query, ROUTE_PROMPTS
+
+from app.services.agent_service import handle_query, supervisor, build_messages, db_var
 from app.db.connection import get_db
 
 logger = logging.getLogger(__name__)
@@ -41,17 +40,17 @@ async def query(request: Request, req: QueryRequest, db=Depends(get_db)):
         )
         return result
     except Exception as e:
-        error_msg = str(e).lower()
-        if "429" in error_msg or "rate" in error_msg:
-            logger.warning("Rate limit hit: %s", e)
+        err = str(e).lower()
+        if "429" in err or "rate" in err:
+            logger.warning("rate limit hit: %s", e)
             return {
-                "response": "I'm temporarily rate-limited. Please wait 30-60 seconds and try again.",
+                "response": "Rate limited. Please wait 30-60 seconds.",
                 "type": "error",
                 "sources": [],
             }
-        logger.exception("Query failed: %s", e)
+        logger.exception("query failed: %s", e)
         return {
-            "response": "Something went wrong processing your query. Please try rephrasing or try again.",
+            "response": "Something went wrong. Please try rephrasing.",
             "type": "error",
             "sources": [],
         }
@@ -60,14 +59,12 @@ async def query(request: Request, req: QueryRequest, db=Depends(get_db)):
 @router.post("/query/stream")
 @limiter.limit("100/hour")
 async def query_stream(request: Request, req: QueryRequest, db=Depends(get_db)):
-    route = await route_query(req.message)
-    agent = _build_agent_for_route(db, route)
-    route_prompt = ROUTE_PROMPTS[route]
-    messages = _build_messages(req.message, req.location, req.time_available, req.interests, route_prompt)
+    db_var.set(db)
+    messages = build_messages(req.message, req.location, req.time_available, req.interests)
 
     async def generate():
         try:
-            async for chunk, metadata in agent.astream(
+            async for chunk, metadata in supervisor.astream(
                 {"messages": messages},
                 config={"configurable": {"thread_id": f"{req.session_id}_{uuid.uuid4().hex[:8]}"}},
                 stream_mode="messages",
@@ -81,12 +78,12 @@ async def query_stream(request: Request, req: QueryRequest, db=Depends(get_db)):
                     yield f"data: {json.dumps({'token': chunk.content})}\n\n"
             yield "data: [DONE]\n\n"
         except Exception as e:
-            error_msg = str(e).lower()
-            if "429" in error_msg or "rate" in error_msg:
-                logger.warning("NIM rate limit during stream: %s", e)
-                yield f"data: {json.dumps({'token': 'Rate limited — please wait 30-60 seconds and try again.'})}\n\n"
+            err = str(e).lower()
+            if "429" in err or "rate" in err:
+                logger.warning("stream rate limited: %s", e)
+                yield f"data: {json.dumps({'token': 'Rate limited — wait 30-60 seconds.'})}\n\n"
             else:
-                logger.exception("Stream failed")
+                logger.exception("stream failed")
                 yield f"data: {json.dumps({'error': str(e)})}\n\n"
             yield "data: [DONE]\n\n"
 
